@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CloudDatabasesAssignment;
 using Microsoft.EntityFrameworkCore;
 
-
-namespace CloudDatabasesAssignment.DAL
+namespace DAL
 {
-    class StoreProductContext : DbContext
+    public class StoreProductContext : DbContext
     {
-        DbSet<StoreProduct> products { get; set; }
+        public DbSet<Product> products { get; set; }
 
         public StoreProductContext(DbContextOptions<StoreProductContext> options) : base(options)
         {
-        }
 
+        }
     }
 }
